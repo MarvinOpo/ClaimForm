@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <params.com.stepview.StatusViewScroller
+        android:id="@+id/cf4_step_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/claim_form_steps"
+        android:padding="10dp"
+        app:alignStatusWithCurrent="true"
+        app:circleColor="@color/colorAccent"
+        app:circleColorCurrent="@color/colorAccent"
+        app:circleColorIncomplete="#BCBCBE"
+        app:circleColorType="fillStroke"
+        app:circleStrokeColor="@color/colorAccent"
+        app:circleStrokeWidth="1dp"
+        app:completeDrawable="@drawable/check_icon"
+        app:currentCount="2"
+        app:currentStepZoom="0.3"
+        app:drawLabels="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineColorCurrent="@color/colorPrimary"
+        app:lineColorIncomplete="#B4B7BA"
+        app:lineGap="1dp"
+        app:lineWidth="1dp"
+        app:stepCount="6"
+        app:textColorLabels="@android:color/white"
+        app:textColorLabelsCurrent="@android:color/white"
+        app:textSizeLabels="15sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cf4_step_status">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/admission_info_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:elevation="3dp"
+                android:outlineProvider="none"
+                android:padding="10dp"
+                android:text="@string/admission_info_label"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/form_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/admission_info_label">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/admission_info_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/present_illness_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/illness_history_hint"
+                            android:inputType="textMultiLine"
+                            android:minHeight="100dp"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/med_history_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/present_illness_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/med_history_hint"
+                            android:inputType="textMultiLine"
+                            android:minHeight="100dp"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/ob_gyn_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/ob_gyn_label"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/med_history_til" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/gravidity_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/ob_gyn_label">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/gravidity_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/parity_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/gravidity_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/parity_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/full_pregnancy_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/parity_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/full_pregnancy_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/premature_pregnancy_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/full_pregnancy_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/premature_pregnancy_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/abortion_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/premature_pregnancy_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/no_abortion_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/living_child_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/abortion_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/no_living_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/first_mens_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/living_child_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/fmens_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/period_duration_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/first_mens_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/period_duration_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lmp_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_border"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/period_duration_til">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/lmp_label"
+                            android:inputType="number"
+                            android:padding="5dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/admission_next_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:elevation="3dp"
+        android:outlineProvider="none"
+        android:src="@drawable/arrow_next_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

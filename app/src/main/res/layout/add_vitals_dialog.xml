@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/add_vitals_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="@string/add_vitals"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/date_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_50"
+            app:layout_constraintTop_toBottomOf="@id/add_vitals_label">
+
+            <EditText
+                android:id="@+id/vitals_date_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/calendar_icon_primary"
+                android:focusable="false"
+                android:hint="@string/date"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/body_temp_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_50"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_vitals_label">
+
+            <EditText
+                android:id="@+id/vitals_temp_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/temperature"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_systolic_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/systolic_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_50"
+            app:layout_constraintTop_toBottomOf="@id/date_til">
+
+            <EditText
+                android:id="@+id/vitals_systolic_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/bp_systolic"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_diastolic_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/diastolic_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_50"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_til">
+
+            <EditText
+                android:id="@+id/vitals_diastolic_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/bp_diastolic"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_resp_rate_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/resp_rate_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_50"
+            app:layout_constraintTop_toBottomOf="@id/systolic_til">
+
+            <EditText
+                android:id="@+id/vitals_resp_rate_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/resp_rate"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_pulse_rate_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pulse_rate_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_50"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/diastolic_til">
+
+            <EditText
+                android:id="@+id/vitals_pulse_rate_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/pulse_rate"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_height_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/height_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_50"
+            app:layout_constraintTop_toBottomOf="@id/resp_rate_til">
+
+            <EditText
+                android:id="@+id/vitals_height_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/height"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_weight_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weight_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_50"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pulse_rate_til">
+
+            <EditText
+                android:id="@+id/vitals_weight_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/weight"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_pain_score_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pain_score_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_50"
+            app:layout_constraintTop_toBottomOf="@id/height_til">
+
+            <EditText
+                android:id="@+id/vitals_pain_score_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/pain_score"
+                android:inputType="number"
+                android:nextFocusDown="@id/vitals_o2_edtx"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/o2_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_50"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weight_til">
+
+            <EditText
+                android:id="@+id/vitals_o2_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/o2_sat"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/vitals_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_solid"
+            android:text="Add"
+            android:textColor="#fff"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/o2_til" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

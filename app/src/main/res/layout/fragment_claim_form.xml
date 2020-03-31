@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/form_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <include
+            android:id="@+id/hci_info"
+            layout="@layout/claim_hci_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/admission_info"
+            layout="@layout/claim_admission_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/hci_info" />
+
+        <include
+            android:id="@+id/sign_symptoms_info"
+            layout="@layout/claim_sign_symptoms_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/admission_info" />
+
+        <include
+            android:id="@+id/referred_info"
+            layout="@layout/claim_referred_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sign_symptoms_info" />
+
+        <include
+            android:id="@+id/physical_exam_info"
+            layout="@layout/claim_physical_exam_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/referred_info" />
+
+        <include
+            android:id="@+id/vitals_info"
+            layout="@layout/claim_vitals_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/physical_exam_info" />
+
+        <include
+            android:id="@+id/heent_info"
+            layout="@layout/claim_heent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/vitals_info" />
+
+        <include
+            android:id="@+id/chest_lungs_info"
+            layout="@layout/claim_chest_lungs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/heent_info" />
+
+        <include
+            android:id="@+id/cvs_info"
+            layout="@layout/claim_cvs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/chest_lungs_info" />
+
+        <include
+            android:id="@+id/abdomen_info"
+            layout="@layout/claim_abdomen_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cvs_info" />
+
+        <include
+            android:id="@+id/guie_info"
+            layout="@layout/claim_guie_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/abdomen_info" />
+
+        <include
+            android:id="@+id/skin_extremeties_info"
+            layout="@layout/claim_skin_extremeties_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guie_info" />
+
+        <include
+            android:id="@+id/neuro_info"
+            layout="@layout/claim_neuro_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/skin_extremeties_info" />
+
+        <include
+            android:id="@+id/digital_info"
+            layout="@layout/claim_digital_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/neuro_info" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

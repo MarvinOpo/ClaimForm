@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/vs_item_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/blood_pressure_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/latest_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/latest"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/vs_item_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vs_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/blood_pressure"
+            app:layout_constraintLeft_toRightOf="@id/latest_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vs_item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="@string/blood_pressure_value"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/vs_item_icon"
+            app:layout_constraintTop_toBottomOf="@id/vs_item_label" />
+
+        <TextView
+            android:id="@+id/vs_item_metric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/blood_pressure_metric"
+            app:layout_constraintBottom_toBottomOf="@id/vs_item_value"
+            app:layout_constraintLeft_toRightOf="@id/vs_item_value"
+            app:layout_constraintTop_toTopOf="@id/vs_item_value" />
+
+        <RelativeLayout
+            android:id="@+id/vs_item_chart_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/vs_item_icon"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

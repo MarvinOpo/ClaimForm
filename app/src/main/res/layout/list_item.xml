@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/patient_image_tv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:elevation="3dp"
+            android:src="@drawable/default_profile"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/login_cv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/login_cv" />
+
+        <TextView
+            android:id="@+id/patient_id_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/patient_id"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintLeft_toRightOf="@id/patient_image_tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/patient_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/patient_name"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/patient_image_tv"
+            app:layout_constraintTop_toBottomOf="@+id/patient_id_tv" />
+
+        <TextView
+            android:id="@+id/patient_gender_age_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/patient_gender"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintLeft_toRightOf="@id/patient_image_tv"
+            app:layout_constraintTop_toBottomOf="@id/patient_name_tv" />
+
+        <TextView
+            android:id="@+id/patient_view_more_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/view_more"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/link"
+            app:layout_constraintBottom_toBottomOf="@id/patient_gender_age_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/patient_gender_age_tv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/patient_image_tv">
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/admit_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/admit_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_view" />
+
+            <TextView
+                android:id="@+id/admit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/admit_value"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/admit_label" />
+
+            <TextView
+                android:id="@+id/discharge_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/discharge_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/admit_tv" />
+
+            <TextView
+                android:id="@+id/discharge_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/discharge_value"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/discharge_label" />
+
+            <TextView
+                android:id="@+id/pin_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/pin_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/discharge_tv" />
+
+            <TextView
+                android:id="@+id/pin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toRightOf="@id/pin_label"
+                app:layout_constraintTop_toBottomOf="@id/discharge_tv" />
+
+            <TextView
+                android:id="@+id/bday_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/bday_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pin_tv" />
+
+            <TextView
+                android:id="@+id/bday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/bday_value"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toRightOf="@id/bday_label"
+                app:layout_constraintTop_toBottomOf="@id/pin_tv" />
+
+            <TextView
+                android:id="@+id/fcase_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/fcase_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bday_tv" />
+
+            <TextView
+                android:id="@+id/fcase_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toRightOf="@id/fcase_label"
+                app:layout_constraintTop_toBottomOf="@id/bday_tv" />
+
+            <TextView
+                android:id="@+id/scase_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/scase_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcase_tv" />
+
+            <TextView
+                android:id="@+id/scase_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toRightOf="@id/scase_label"
+                app:layout_constraintTop_toBottomOf="@id/fcase_tv" />
+
+            <TextView
+                android:id="@+id/datetime_adm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/datetime_adm_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scase_tv" />
+
+            <TextView
+                android:id="@+id/datetime_adm_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/datetime_adm_value"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datetime_adm_label" />
+
+            <TextView
+                android:id="@+id/datetime_dischrg_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/datetime_dischrg_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datetime_adm_tv" />
+
+            <TextView
+                android:id="@+id/datetime_dischrg_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/datetime_dischrg_value"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datetime_dischrg_label" />
+
+            <Button
+                android:id="@+id/visit_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/rounded_solid"
+                android:text="@string/visit_profile"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_50"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datetime_dischrg_tv" />
+
+            <Button
+                android:id="@+id/claim_form_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_solid"
+                android:text="@string/claim_form"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/v_guide_50"
+                app:layout_constraintTop_toBottomOf="@id/datetime_dischrg_tv" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guide_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

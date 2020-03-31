@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#81d4fa</color>-->
+    <!--<color name="colorPrimaryDark">#4ba3c7</color>-->
+    <!--<color name="colorAccent">#b6ffff</color>-->
+
+    <color name="colorPrimary">#8d6e63</color>
+    <color name="colorPrimaryDark">#5f4339</color>
+    <color name="colorAccent">#be9c91</color>
+
+    <color name="hint">#464646</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="transparent_white">#bbffffff</color>
+
+    <color name="link">#0645AD</color>
+
+    <color name="green">#399839</color>
+    <color name="red">#d95450</color>
+
+    <color name="bright_red">#ffcdd2</color>
+    <color name="bright_purple">#e1bee7</color>
+    <color name="bright_blue">#bbdefb</color>
+    <color name="bright_green">#c8e6c9</color>
+    <color name="bright_orange">#ffccbc</color>
+
+    <array name="color_backgrounds">
+        <item>@color/bright_red</item>
+        <item>@color/bright_purple</item>
+        <item>@color/bright_blue</item>
+        <item>@color/bright_green</item>
+        <item>@color/bright_orange</item>
+    </array>
+</resources>

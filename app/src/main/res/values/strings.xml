@@ -1,0 +1,276 @@
+<resources>
+    <string name="app_name">VSMMC EHR</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <!-- PATIENT PROFILE LABELS-->
+    <string name="visit_profile">Visit Profile</string>
+    <string name="notes">Notes</string>
+    <string name="add_notes">Add Note</string>
+    <string name="date">Date</string>
+    <string name="date_from">Date From</string>
+    <string name="date_to">Date To</string>
+    <string name="diagnostic">Diagnostics</string>
+
+    <string name="latest">Latest: </string>
+    <string name="patient_id">20190703024600</string>
+    <string name="patient_name">John X. Doe</string>
+    <string name="patient_gender">Male | 24YO</string>
+
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="blood_pressure_value">100/90</string>
+    <string name="blood_pressure_metric">mmHg</string>
+
+    <string name="body_temp">Body Temp</string>
+    <string name="body_temp_value">39.0</string>
+    <string name="body_temp_metric">°C</string>
+
+    <string name="resp_rate">Resp Rate</string>
+    <string name="resp_rate_value">12</string>
+    <string name="resp_rate_metric">rpm</string>
+
+    <string name="pulse_rate">Pulse Rate</string>
+    <string name="pulse_rate_value">88</string>
+    <string name="pulse_rate_metric">bpm</string>
+
+    <string name="height">Height</string>
+    <string name="height_value">170</string>
+    <string name="height_metric">cm</string>
+
+    <string name="weight">Weight</string>
+    <string name="weight_value">65</string>
+    <string name="weight_metric">kg</string>
+
+    <string name="bmi">BMI</string>
+    <string name="bmi_value">22</string>
+    <string name="bmi_metric">Normal Weight</string>
+
+    <string name="pain_score">Pain Score</string>
+    <string name="pain_score_value">2</string>
+    <string name="empty_label"> </string>
+
+    <string name="o2_sat">02 SAT</string>
+    <string name="o2_sat_value">90</string>
+
+    <string name="patient_result">Patient Results</string>
+
+    <!-- PATIENT CALENDAR LABELS -->
+    <string name="date_label">11 - THURSDAY</string>
+    <string name="calendar_edtx_hint">
+        Write some order for John X. Doe..
+    </string>
+    <string name="add_order">Add Order</string>
+    <string name="department">Department</string>
+    <string name="description">Order description...</string>
+
+    <!-- CLAIM FORM LABELS -->
+    <string name="claim_form">Claim Form</string>
+
+    <string name="admit_label">Admitting Diagnosis:</string>
+    <string name="admit_value">G1P0 41 4/7 WKS AOG/LMP CEPHALIC IN LABOR PROM X 18 HOURS</string>
+
+    <string name="discharge_label">Discharge Diagnosis:</string>
+    <string name="discharge_value">NSD</string>
+
+    <string name="pin_label">PIN:</string>
+
+    <string name="bday_label">Birth Date:</string>
+    <string name="bday_value">01/01/1991</string>
+
+    <string name="fcase_label">1st Case Code:</string>
+    <string name="scase_label">2nd Case Code:</string>
+
+    <string name="datetime_adm_label">Date/Time Admitted:</string>
+    <string name="datetime_adm_value">09/30/2019 05:04 PM</string>
+
+    <string name="datetime_dischrg_label">Date/Time Discharged:</string>
+    <string name="datetime_dischrg_value">10/15/2019 01:20 PM</string>
+
+    <string name="view_more">View More</string>
+    <string name="view_less">View Less</string>
+
+    <string name="hci_info_label">HEALTH CARE INSTITUTION (HCI) INFORMATION</string>
+    <string name="hci_name">NAME OF HCI: </string>
+    <string name="hospital_name">Vicente Sotto Memorial Medical Center</string>
+    <string name="hci_address">ADDRESS OF HCI:</string>
+    <string name="hci_address_value">B. Rodriguez St., Cebu City</string>
+
+    <string name="accred_number">ACCREDITATION NO.:</string>
+    <string name="accred_value">H070122</string>
+
+    <string name="admission_info_label">REASON FOR ADMISSION</string>
+    <string name="illness_history_hint">History of Present Illness</string>
+    <string name="med_history_hint">Pertinent Past Medical History</string>
+    
+    <string name="ob_gyn_label">OB/GYN HISTORY</string>
+    <string name="gravidity_label">Gravidity (Pregnancy Count)</string>
+    <string name="parity_label">Parity (Delivery Count)</string>
+    <string name="full_pregnancy_label">Full Term Pregnancy</string>
+    <string name="premature_pregnancy_label">Premature Pregnancy</string>
+    <string name="no_abortion_label">No. of Abortion</string>
+    <string name="no_living_label">No. of Living Children</string>
+    <string name="fmens_label">Age of First Menstruation</string>
+    <string name="period_duration_label">Period Duration</string>
+    <string name="lmp_label">LMP</string>
+
+    <string name="sign_symptom_label">PERTINENT SIGN AND SYMPTOMS</string>
+
+    <string name="mental_sensorium">Altered Mental Sensorium</string>
+    <string name="abdomin_cramp">Abdominal Cramp/Pain</string>
+    <string name="anoxeria">Anoxeria</string>
+    <string name="bleeding_gums">Bleeding Gums</string>
+    <string name="body_weakness">Body Weakness</string>
+    <string name="blur_vision">Blurring Vision</string>
+    <string name="chest_pain">Chest Pain/Discomfort</string>
+    <string name="constipation">Constipation</string>
+    <string name="cough">Cough</string>
+    <string name="diarrhea">Diarrhea</string>
+    <string name="dizziness">Dizziness</string>
+    <string name="dysphagia">Dysphagia</string>
+    <string name="dyspnea">Dyspnea</string>
+    <string name="dysuria">Dysuria</string>
+    <string name="epistaxis">Epistaxis</string>
+    <string name="fever">Fever</string>
+    <string name="frequency_of_urination">Frequency of Urination</string>
+    <string name="headache">Headache</string>
+    <string name="hematemesis">Hematemesis</string>
+    <string name="hematuria">Hematuria</string>
+    <string name="hemoptysis">Hemoptysis</string>
+    <string name="irritability">Irritability</string>
+    <string name="jaundice">Jaundice</string>
+    <string name="low_extremity_edema">Lower Extremity Edema</string>
+    <string name="myalgia">Myalgia</string>
+    <string name="orthpnea">Orthpnea</string>
+    <string name="pain">Pain</string>
+    <string name="palpitation">Palpitations</string>
+    <string name="seizures">Seizures</string>
+    <string name="skin_rashes">Skin Rashes</string>
+    <string name="stool">Stool, Bloody/Black Tarry/Mucoid</string>
+    <string name="sweating">Sweating</string>
+    <string name="urgency">Urgency</string>
+    <string name="vomiting">Vomiting</string>
+    <string name="weight_loss">Weight Loss</string>
+    <string name="others">Others</string>
+    
+    <string name="referred_label">REFERRED</string>
+    <string name="referred_from_hci">Referred from another HCI?</string>
+    <string name="originating_hci">Name of Originating HCI?</string>
+
+    <string name="physical_exam_label">PHYSICAL EXAMINATION</string>
+    
+    <string name="awake_alert">Awake and Alert</string>
+    <string name="altered_sensorium">Altered Sensorium</string>
+    
+    <string name="vitals_label">VITALS</string>
+    <string name="bp_systolic">BP Systolic</string>
+    <string name="bp_diastolic">BP Diastolic</string>
+    <string name="hr">HR</string>
+    <string name="rr">RR</string>
+    <string name="temperature">Temperature</string>
+
+    <string name="heent_label">HEENT</string>
+    <string name="essential_normal">Essentially Normal</string>
+    <string name="abnormal_reaction">Abnormal Pupillary Reaction</string>
+    <string name="cervical_lymph">Cervical Lympadenopathy</string>
+    <string name="dry_membrane">Dry Mucous Membrane</string>
+    <string name="icteric_sclerae">Icteric Sclerae</string>
+    <string name="pale_conjunctivae">Pale Conjunctivae</string>
+    <string name="sunken_eyeball">Sunken Eyeballs</string>
+    <string name="sunken_fontanelle">Sunken Fontanelle</string>
+
+    <string name="chest_lungs_label">CHEST/LUNGS</string>
+    <string name="chest_expansion">Asymmetrical Chest Expansion</string>
+    <string name="decrease_breath">Decreased Breath Sounds</string>
+    <string name="wheezes">Wheezes</string>
+    <string name="lumps_breast">Lumps Over Breast</string>
+    <string name="rales_crackles">Rales/Crackles/Rhonchi</string>
+    <string name="rib_retraction">Intercostal Rib Retraction</string>
+    <string name="enlarge_axillary">Enlarge Axillary Lymph Nodes</string>
+    
+    <string name="cvs_label">CVS</string>
+    <string name="displaced_apex">Displaced Apex Beat</string>
+    <string name="heave_thrills">Heave and/or Thrills</string>
+    <string name="pericardial_bulge">Perricardial Bulge</string>
+    <string name="irregular_rhythm">Irregular Rhythm</string>
+    <string name="muffled_heart">Muffled Heart Sounds</string>
+    <string name="murmur">Murmur</string>
+
+    <string name="abdomen_label">ABDOMEN</string>
+    <string name="abdomen_ridity">Abdominal Rigidity</string>
+    <string name="abdomen_tenderness">Abdomen Tenderness</string>
+    <string name="hyper_bowel">Hyperactive Bowel Sounds</string>
+    <string name="palpable_mass">Palpable Masses</string>
+    <string name="tympanitic_abdomen">Tympanitic/Dull Abdomen</string>
+    <string name="uterine_contraction">Uterine Contraction</string>
+
+    <string name="gu_label">GU (IE)</string>
+    <string name="stained_finger">Blood stained in examining finger</string>
+    <string name="cervical_dilatation">Cervical Dilatation</string>
+    <string name="abnormal_discharge">Presence of Abnormal Discharge</string>
+
+    <string name="skin_extremities">SKIN/EXTREMITIES</string>
+    <string name="clubbing">Clubbing</string>
+    <string name="cold_clammy">Cold clammy</string>
+    <string name="cyanosis_motted">Cyanosis/Motted Skin</string>
+    <string name="edema_swelling">Edema/Swelling</string>
+    <string name="decrease_mobility">Decrease Mobility</string>
+    <string name="pale_nailbeds">Pale Nailbeds</string>
+    <string name="skin_turgor">Poor Skin Turgor</string>
+    <string name="rashes_petechiae">Rashes/Petechiae</string>
+    <string name="weak_pulses">Weak Pulses</string>
+    
+    <string name="neuro_label">NEURO-EXAM</string>
+    <string name="abnormal_gait">Abnormal Gait</string>
+    <string name="abnormal_position">Abnormal Position Sense</string>
+    <string name="abnormal_sensation">Abnormal Sensation</string>
+    <string name="abnormal_reflexes">Presence of Abnormal Reflex</string>
+    <string name="altered_memory">Poor/Altered Memory</string>
+    <string name="tone_strength">Poor Muscle Tone/Strength</string>
+    <string name="poor_condition">Poor Condition</string>
+
+    <string name="digital_label">DIGITAL RECTAL</string>
+    <string name="mass">Mass</string>
+    <string name="pus">Pus</string>
+    <string name="enlarge_prostrate">Enlarge Prostate</string>
+    <string name="hemorrhoids">Hemorrhoids</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Mauris at condimentum enim.
+        Sed ex leo, luctus pulvinar imperdiet in, euismod ut velit.
+    </string>
+
+    <string-array name="order_departments">
+        <item>Laboratory</item>
+        <item>Medicine</item>
+        <item>Pharmacy</item>
+        <item>Ultrasound</item>
+        <item>X-Ray</item>
+    </string-array>
+
+    <string name="add_vitals">Add Vital Sign</string>
+    <string name="add_procedure">Add Procedure</string>
+
+    <string name="chief_complaints">Chief Complaints</string>
+    <string name="admission_diagnosis">Admission Diagnosis/Impressions (I)</string>
+    <string name="discharge_diagnosis">Discharge Diagnosis (Dx)</string>
+
+    <string-array name="claim_form_steps">
+        <item>HCI Info</item>
+        <item>Admission</item>
+        <item>Sign|Symptoms</item>
+        <item>Physical Exam</item>
+        <item>Heent|Chest|Lungs</item>
+        <item>Cvs|Abdomen</item>
+    </string-array>
+</resources>

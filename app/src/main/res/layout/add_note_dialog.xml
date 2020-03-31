@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/add_note_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="@string/add_notes"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/date_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/add_note_label">
+
+            <EditText
+                android:id="@+id/note_datetime_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/calendar_icon_primary"
+                android:focusable="false"
+                android:hint="@string/date"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="07/10/19"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/diagnostic_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+
+            app:layout_constraintTop_toBottomOf="@id/date_til">
+
+            <EditText
+                android:id="@+id/note_body_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/diagnostic"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minHeight="100dp"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/note_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_solid"
+            android:text="Add"
+            android:textColor="#fff"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/diagnostic_til" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
